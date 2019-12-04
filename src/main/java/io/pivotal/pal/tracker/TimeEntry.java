@@ -22,17 +22,6 @@ public class TimeEntry {
         this.hours = hours;
     }
 
-    @Override
-    public String toString() {
-        return "TimeEntry{" +
-                "id=" + id +
-                ", projectId=" + projectId +
-                ", userId=" + userId +
-                ", date=" + date +
-                ", hours=" + hours +
-                '}';
-    }
-
     public TimeEntry(long id, long projectId, long userId, LocalDate date, int hours) {
         this.id = id;
         this.projectId = projectId;
@@ -89,6 +78,17 @@ public class TimeEntry {
 
     public long getUserId() {
         return userId;
+    }
+
+    @Override
+    public String toString() {
+        return "TimeEntry{" +
+                "id=" + id +
+                ", projectId=" + projectId +
+                ", userId=" + userId +
+                ", date=" + date +
+                ", hours=" + hours +
+                '}';
     }
 
     public LocalDate getDate() {
