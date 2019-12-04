@@ -3,10 +3,11 @@ package io.pivotal.pal.tracker;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 
-    HashMap<Long, TimeEntry> map = new HashMap();
+    Map<Long, TimeEntry> map = new HashMap();
 
     private long idCounter = 1L;
 
