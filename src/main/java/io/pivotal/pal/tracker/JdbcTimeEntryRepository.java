@@ -31,6 +31,7 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository {
             "date = ?, " +
             "hours = ? " +
             "where id = ?";
+    private final String TIME_ENTRY_DELETE_ID_SQL = "delete from time_entries where id = ?";
 
     public JdbcTimeEntryRepository(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
@@ -96,7 +97,7 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository {
 
     @Override
     public void delete(long id) {
-
+        jdbcTemplate.update(TIME_ENTRY_DELETE_ID_SQL, id);
     }
 
     @Override
