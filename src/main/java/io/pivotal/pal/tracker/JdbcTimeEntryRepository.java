@@ -26,11 +26,8 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository {
             "hours) values (?,?,?,?)";
     private final String TIME_ENTRY_SELECT_SQL = "select * from time_entries where id = ?";
     private final String TIME_ENTRY_SELECT_ALL_SQL = "select * from time_entries";
-    private final String TIME_ENTRY_UPDATE_ID_SQL = "update time_entries set project_id = ?, " +
-            "user_id = ?, " +
-            "date = ?, " +
-            "hours = ? " +
-            "where id = ?";
+    private final String TIME_ENTRY_UPDATE_ID_SQL = "update time_entries set project_id = ?, user_id = ?, " +
+            "date = ?, hours = ? where id = ?";
     private final String TIME_ENTRY_DELETE_ID_SQL = "delete from time_entries where id = ?";
 
     public JdbcTimeEntryRepository(DataSource dataSource) {
